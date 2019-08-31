@@ -23,6 +23,19 @@ fs.writeFile('app.json',data, (err) => {
     }
 });
 
+// File System Read 
+
+
+fs.readFile('app.json', (err,data) => {
+    if (err) {
+        console.log(err);
+    }
+    
+    let result = JSON.parse(data);
+
+    console.log(result.email)
+
+});
 
 
 
