@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahbab71/jsmodule.git"
+  },
+  "author": "ahbab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahbab71/jsmodule/issues"
+  },
+  "homepage": "https://github.com/ahbab71/jsmodule#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

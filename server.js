@@ -1,21 +1,9 @@
 const express = require('express')
+const UserRouter = require('./routes.js')
+const {getProId} = require('./routesContolars.js')
+
 
 const app = express();
-
-
-
-app.get('/about', (req, res) => {
-    let result = res.send('<h1>Hi I am About Page</h1>')
-    console.log(result)
-})
-
-
-app.get('/blog', (req, res) => {
-    let result = res.send('<h1>Hi I am Blog Page</h1>')
-    console.log(result)
-})
-
-
 
 
 app.get('/', (req, res) => {
@@ -23,12 +11,11 @@ app.get('/', (req, res) => {
     console.log(result)
 })
 
+app.get('/products/:proid', getProId)
 
-app.get('*', (req, res) => {
-    let result = res.end('<h1>404 Not Found...!</h1>')
-    console.log(result)
-})
 
+
+app.use('/users', UserRouter);
 
 
 // Database connection
